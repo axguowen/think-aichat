@@ -113,7 +113,7 @@ class AiChat extends Manager
      * @param array $options 配置参数
      * @return array
      */
-    public function send($data, $options = [])
+    public function send(array $data, array $options = [])
     {
         return $this->platform(null, $options)->send($data);
     }

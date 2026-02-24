@@ -55,5 +55,5 @@ abstract class Platform
      * @param array $data
      * @return array
      */
-    abstract public function send($data);
+    abstract public function send(array $data);
 }

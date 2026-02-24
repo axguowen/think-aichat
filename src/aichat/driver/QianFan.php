@@ -100,7 +100,13 @@ class QianFan extends Platform
             ]);
             // 请求失败
             if (!$response->ok()) {
-                return [null, new \Exception($response->error, 400)];
+                $errorData = $response->json();
+                // 如果为空
+                if(empty($errorData) || !is_array($errorData) || !isset($errorData['error'])){
+                    // 返回
+                    return [null, new \Exception('请求失败', 400)];
+                }
+                return [null, new \Exception($errorData['error']['message'], 400)];
             }
             // 获取请求结果
             $result = is_null($response->body) ? [] : $response->json();
