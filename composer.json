@@ -1,0 +1,32 @@
+{
+    "name": "axguowen/think-aichat",
+    "description": "Simple AI Chat For ThinkPHP",
+    "keywords": [
+        "thinkphp",
+        "ai",
+        "chat"
+    ],
+    "license": "Apache-2.0",
+    "authors": [
+        {
+            "name": "axguowen",
+            "email": "axguowen@qq.com"
+        }
+    ],
+    "require": {
+        "topthink/framework": "^6.1||^8.0",
+        "axguowen/http-client": "^1.0||dev-master"
+    },
+    "autoload": {
+        "psr-4": {
+            "think\\": "src"
+        }
+    },
+    "extra": {
+        "think": {
+            "config": {
+                "aichat": "src/aichat/config.php"
+            }
+        }
+    }
+}
